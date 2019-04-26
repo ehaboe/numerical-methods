@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Numerical Analysis</title>
+	<link rel="icon" href="assets/fav.ico" />
+	<meta charset="utf-8" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/math/mathquill.css" />
+	<link rel="stylesheet" href="assets/math/matheditor.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Content -->
+	<div id="content">
+
+
+		<div class="inner">
+			<div align="center">
+				<header style="font-size: 150%;">Bisection method</header>
+				<div id="errormsg"></div>
+				<table class="input" align="center">
+					<thead>
+						<tr>
+							<div id="mathfield" style="width:50%;">x^3+x-1</div>
+							<div id="hidden" style="display:none;">x^3+x-1</div>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Xl: <input type="number" id="xl" value="0"></td>
+							<td>Error: <input type="number" id="eps" value="0.5"></td>
+						</tr>
+						<tr>
+							<td>Xu: <input type="number" id="xu" value="1"></td>
+							<td>Max iterations: <input type="number" id="maxiter" value="10"></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Root = <label id="root"></label></td>
+							<td></td>
+						</tr>
+					</tfoot>
+				</table>
+
+				<button id="demo"
+					onclick="x(mE.getValue()); clrtab(); bisection(xl.value, xu.value, eps.value);">Calculate</button>
+				<br>
+
+				<table class="output" id="disp">
+					<thead>
+						<tr>
+							<th>I</th>
+							<th>Xl</th>
+							<th>f(Xl)</th>
+							<th>Xu</th>
+							<th>f(Xu)</th>
+							<th>Xr</th>
+							<th>f(Xr)</th>
+							<th>Error</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+
+		<!-- Logo -->
+		<h1 id="logo"><a href="index.html">Numerical Analysis</a></h1>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li class="current"><a href="bisection.html">Bisection</a></li>
+				<li><a href="falspos.html">False-position</a></li>
+				<li><a href="fxp.html">Simple fixed point</a></li>
+				<li><a href="newton.html">Newton</a></li>
+				<li><a href="matrix.html">Matrix operations</a></li>
+			</ul>
+		</nav>
+
+
+
+
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/math.js"></script>
+	<script src="assets/math/latex-to-js.js"></script>
+	<script src="assets/math/mathquill.js"></script>
+	<script src="assets/math/matheditor.js"></script>
+	<script> //Work-around for Chrome CORS support
+		var mE = new MathEditor('mathfield');
+
+		function x(x) {
+			var span = document.getElementById('hidden');
+			z = latex_to_js(x);
+			span.innerHTML = z;
+			return x;
+		}	
+	</script>
+
+
+
+</body>
+
+</html>

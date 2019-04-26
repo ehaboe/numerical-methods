@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Numerical Analysis</title>
+	<link rel="icon" href="assets/fav.ico" />
+	<meta charset="utf-8" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Content -->
+	<div id="content">
+
+
+		<div class="inner">
+			<div align="center">
+				<header style="font-size: 150%;">Matrix methods</header>
+				<select class="matselect" id="selection" onchange="">
+					<option value="sl_no" selected disabled>Select an option to get Started</option>
+					<option value="sl_cr">Cramer's Rule</option>
+					<option value="sl_gs">Gauss Elimination</option>
+					<option value="sl_lu">LU Decomposition</option>
+				</select><br>
+
+				<div id="augmat">
+
+					<table id="augtab" class="augtab">
+						<tr>
+							<td class="cell">
+								<input type="text" id="a1" value="2">
+							</td>
+							<td class="cell">
+								<input type="text" id="a2" value="1">
+							</td>
+							<td class="cell">
+								<input type="text" id="a3" value="1">
+							</td>
+							<div id="hide_x1">
+								<td class="cellX">
+									<input type="text" id="x1" value="8">
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<td class="cell">
+								<input type="text" id="b1" value="4">
+							</td>
+							<td class="cell">
+								<input type="text" id="b2" value="1">
+							</td>
+							<td class="cell">
+								<input type="text" id="b3" value="0">
+							</td>
+							<div id="hide_x2">
+								<td class="cellX">
+									<input type="text" id="x2" value="11">
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<td class="cell">
+								<input type="text" id="c1" value="-2">
+							</td>
+							<td class="cell">
+								<input type="text" id="c2" value="2">
+							</td>
+							<td class="cell">
+								<input type="text" id="c3" value="1">
+							</td>
+							<div id="hide_x3">
+								<td class="cellX">
+									<input type="text" id="x3" value="3">
+								</td>
+							</div>
+						</tr>
+					</table>
+					<div id="buttons">
+						<button id="calcbtn">Calculate</button>
+						<button id="clrbtn" onclick="clraug();"
+							style="background-color: rgba(119, 3, 3, 0.747)">Clear</button>
+
+					</div>
+					<br>
+					<table id="TResult"></table>
+					<foot></foot>
+				</div>
+
+
+
+
+				<div id="outdiv" style="display:block"></div><br>
+				<div id="resdiv"></div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+
+		<!-- Logo -->
+		<h1 id="logo"><a href="index.html">Numerical Analysis</a></h1>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="bisection.html">Bisection</a></li>
+				<li><a href="falspos.html">False-position</a></li>
+				<li><a href="fxp.html">Simple fixed point</a></li>
+				<li><a href="newton.html">Newton</a></li>
+				<li class="current"><a href="matrix.html">Matrix operations</a></li>
+			</ul>
+		</nav>
+
+
+
+
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/math.js"></script>
+
+
+
+</body>
+
+</html>
