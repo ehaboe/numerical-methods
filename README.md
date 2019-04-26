@@ -1,5 +1,5 @@
 # Introduction
-
+### [Click to see a live demo](https://ehaboe.github.io/numerical-methods/)
 Demonstrates the following root finding algorithms for numerical methods:
 
 - Bisection
