@@ -5,7 +5,7 @@ Demonstrates the following root finding algorithms for numerical methods:
 - Bisection
 - False-Position
 - Simple Fixed Point Iteration
-- Newton-Ralphson
+- Newton-Raphson
 
 As well as solving systems of linear equations with steps using:
 - Gaussian Elimination
